@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:insert="layout::menu"></nav>
+	<div style="width: 500px" align="center">
+		<table class="table">
+			<thead align="center">
+				<tr>
+					<th scope="col">Código</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Género</th>
+				</tr>
+			</thead>
+			<tbody align="center">
+				<tr th:each="alumno :${listaalumnos}">
+					<td th:text="${alumno.codalumno}"></td>
+					<td th:text="${alumno.nomalumno}"></td>
+					<td th:text="${alumno.apealumno}"></td>
+					<td th:text="${alumno.genalumno}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:insert="layout::menu"></nav>
+	<div style="width: 500px">
+		<table class="table">
+			<thead align="center">
+				<tr>
+					<th>Nota 1</th>
+					<th>Nota 2</th>
+					<th>Nota 3</th>
+					<th>Sutentación Proyecto</th>
+					<th>Nota Final</th>
+				</tr>
+
+			</thead>
+			<tbody align="center">
+				<tr th:each="promedio :${Listapromedio}">
+					<td th:text="${promedio.cl1}"></td>
+					<td th:text="${promedio.cl2}"></td>
+					<td th:text="${promedio.cl3}"></td>
+					<td th:text="${promedio.sp}"></td>
+					<td th:text="${promedio.notaFinal}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
